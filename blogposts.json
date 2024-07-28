@@ -1,4 +1,1 @@
-[
-  {"id": 1, "author": "John Doe", "title": "First Post", "content": "This is my first post."},
-  {"id": 2, "author": "Jonas Happ", "title": "Second Post", "content": "This is another post."}
-]
+[{"id": 1, "author": "John Doe", "title": "First Post", "content": "This is my first post."}, {"id": 2, "author": "Jonas Happ", "title": "Second Post", "content": "This is another post."}, {"id": 3, "uuid": "d34d0cb2-8f6a-4a3b-863a-70a928b06196", "author": "Maria Stuart", "title": "The Riddle of Ma", "content": "A long time ago a box was found in the mighty forest of Ma ..."}]

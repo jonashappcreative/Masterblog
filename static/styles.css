@@ -27,3 +27,42 @@ h1 {
 .post p {
     margin: 10px 0;
 }
+
+.container {
+    max-width: 60%;
+    margin: 0 auto;
+    background-color: #FFF;
+    padding: 20px;
+    border: 1px solid #DDD;
+    border-radius: 8px;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.form-group:first-child {
+    margin-left: 0;
+}
+
+.form-group:last-child {
+    margin-right: 0;
+}
+
+.form-group textarea {
+    width: calc(100% + 20px);
+    margin-left: -10px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+}
