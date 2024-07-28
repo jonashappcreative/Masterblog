@@ -1,19 +1,29 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>{{ title }}</title>
-		<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masterblog</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
+<body>
 
-    <body>
-      <h1>Welcome to Masterblog</h1>
+    <h1>Welcome to Masterblog</h1>
 
         <h2>Here is a list of all blog posts:</h2>
-        <ul>
+
             {% for post in data %}
             {{ post["id"] }}. {{ post["title"] }} by {{ post["author"] }}<br>
             {% endfor %}
-        </ul>
 
-  </body>
 
+        <h2>And here are the details:</h2>
+            {% for post in data %}
+            <div class="post">
+                <h3>{{ post["title"] }}</h3>
+                <p><em>Written by {{ post["author"] }}</em></p>
+                <p>{{ post["content"] }}</p>
+            </div>
+         {% endfor %}
+</body>
 </html>

@@ -6,6 +6,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
+
     # add code here to fetch the job posts from a file
 
     with open("blogposts.json", "r") as fileobj:
