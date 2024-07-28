@@ -1,1 +1,35 @@
-[{"id": 1, "author": "John Doe", "title": "First Post", "content": "This is my first post."}, {"id": 2, "author": "Jonas Happ", "title": "Second Post", "content": "This is another post."}, {"id": 3, "uuid": "d34d0cb2-8f6a-4a3b-863a-70a928b06196", "author": "Maria Stuart", "title": "The Riddle of Ma", "content": "A long time ago a box was found in the mighty forest of Ma ..."}]
+[
+    {
+        "id": 1,
+        "author": "John Doe",
+        "title": "First Post",
+        "content": "This is my first post."
+    },
+    {
+        "id": 2,
+        "author": "Jonas Happ",
+        "title": "Second Post",
+        "content": "This is another post."
+    },
+    {
+        "id": 3,
+        "uuid": "d34d0cb2-8f6a-4a3b-863a-70a928b06196",
+        "author": "Maria Stuart",
+        "title": "The Riddle of Ma",
+        "content": "A long time ago a box was found in the mighty forest of Ma ..."
+    },
+    {
+        "id": 4,
+        "uuid": "ec3fb925-1010-4bf4-9ce0-dc503da3341f",
+        "author": "Anon",
+        "title": "Message to X",
+        "content": "10875691384659187360875610837460875361087463786015638"
+    },
+    {
+        "id": 5,
+        "uuid": "444e657d-0fe4-44a1-94f6-23d9e24639ff",
+        "author": "Anon",
+        "title": "Message by X",
+        "content": "87346058763408752697846508723640785630874608164786250746175608375687342687569283764502634016"
+    }
+]

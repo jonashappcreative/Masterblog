@@ -43,7 +43,7 @@ def add():
         blogposts.append(new_post)
 
         with open("blogposts.json", "w") as fileobj:
-            json.dump(blogposts, fileobj)
+            json.dump(blogposts, fileobj, indent=4)
 
         # Redirect to the home page
         return redirect(url_for('index'))
