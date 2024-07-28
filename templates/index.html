@@ -1,0 +1,19 @@
+<html>
+<head>
+    <title>{{ title }}</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+    <body>
+      <h1>Welcome to Masterblog</h1>
+
+        <h2>Here is a list of all blog posts:</h2>
+        <ul>
+            {% for post in data %}
+            {{ post["id"] }}. {{ post["title"] }} by {{ post["author"] }}<br>
+            {% endfor %}
+        </ul>
+
+  </body>
+
+</html>
