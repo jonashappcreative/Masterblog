@@ -42,15 +42,43 @@
     {
         "id": 7,
         "uuid": "4dff27bc-96d9-4bc6-b2e5-135c78f967e1",
-        "author": "Jonas Happ",
-        "title": "hetbdljt",
-        "content": "Test Sentence "
+        "author": "Clara",
+        "title": "Flowering",
+        "content": "This is another blog post"
     },
     {
         "id": 8,
         "uuid": "443365bc-7a8f-4757-80ef-539820b9d61e",
         "author": "Jonas Happ",
         "title": "Does it work?",
-        "content": "Test Sentence "
+        "content": "it did."
+    },
+    {
+        "id": 10,
+        "uuid": "9853c245-8531-4296-be60-0b51dc95c747",
+        "author": "Masterschool",
+        "title": "Dump not Dumps",
+        "content": "This is important!"
+    },
+    {
+        "id": 11,
+        "uuid": "e4add36d-bc59-4dd2-947d-1e8dabcc6740",
+        "author": "Sixteen",
+        "title": "Nine",
+        "content": "9:16\r\nShout Out to Nicolas"
+    },
+    {
+        "id": 12,
+        "uuid": "c2688cb1-50ab-4538-a0b9-e430c708aed1",
+        "author": "Bug",
+        "title": "Debugging",
+        "content": "Debugging is king"
+    },
+    {
+        "id": 13,
+        "uuid": "2adbf840-79d5-48be-88c2-ea809fadbfa0",
+        "author": "Lillipop",
+        "title": "Uhmmm Error",
+        "content": "What are you trying to tell me?"
     }
 ]

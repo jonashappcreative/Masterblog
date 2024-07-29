@@ -13,11 +13,12 @@ def fetch_post_by_id(post_id):
     for post in blogposts:
         if post["id"] == post_id:
             index_of_post = blogposts.index(post)
+            post = blogposts[index_of_post]
+            return post, index_of_post
         else:
             continue
 
-    post = blogposts[index_of_post]
-    return post, index_of_post
+    print("Post not in Posts")
 
 
 @app.route('/')
@@ -76,12 +77,6 @@ def delete(post_id):
     with open("blogposts.json", "r") as fileobj:
         blogposts = json.load(fileobj)
 
-    for post in blogposts:
-        if post["id"] == post_id:
-            index_to_pop = blogposts.index(post)
-        else:
-            continue
-
     post, index = fetch_post_by_id(post_id)
     del blogposts[index]
 
@@ -93,10 +88,8 @@ def delete(post_id):
     return redirect("/")
 
 
-@app.route("/update/<int:post_id>", )
+@app.route("/update/<int:post_id>", methods=['GET', 'POST'])
 def update(post_id):
-
-    # Fetch the blog posts from the JSON file
     post, index = fetch_post_by_id(post_id)
 
     if post is None:
@@ -104,41 +97,31 @@ def update(post_id):
         return "Post not found", 404
 
     if request.method == 'POST':
-
         author = request.form.get('author')
         title = request.form.get('title')
         content = request.form.get('content')
-        id = post_id
-        uuid = post["uuid"]
+
+        updated_post = {
+            "id": post_id,
+            "uuid": post["uuid"],  # Preserve the original UUID
+            "author": author,
+            "title": title,
+            "content": content
+        }
 
         try:
             with open("blogposts.json", "r") as fileobj:
                 blogposts = json.load(fileobj)
-        except FileNotFoundError:
-            blogposts = []
+            blogposts[index] = updated_post
+            with open("blogposts.json", "w") as fileobj:
+                json.dump(blogposts, fileobj, indent=4)
+        except (FileNotFoundError, IndexError):
+            return "Error updating the post", 500
 
-        # Create a new blog post and add it to the list
-        updated_post = {
-            "id": id,
-            "uuid": uuid,
-            "author": author,
-            "title": title,
-            "content": content
-            }
-
-        blogposts[index] = updated_post
-
-        with open("blogposts.json", "w") as fileobj:
-            json.dump(blogposts, fileobj, indent=4)
-
-        # Redirect to the home page
+        # Redirect to the home page after successful update
         return redirect(url_for('index'))
 
-        # Update the post in the JSON file
-        # Redirect back to index
-
-    # Else, it's a GET request
-    # So display the update.html page
+    # For GET request, render the update page with the existing post data
     return render_template('update.html', post=post)
 
 
