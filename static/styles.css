@@ -18,6 +18,7 @@ h1 {
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 8px;
+    position: relative;
 }
 
 .post h2 {
@@ -61,8 +62,47 @@ h1 {
     margin-left: -10px;
 }
 
-button {
-    display: block;
-    width: 100%;
-    margin-top: 20px;
+button, .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    color: #FFF;
+    background-color: #007BFF;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover, .btn:hover {
+    background-color: #0056b3;
+}
+
+.update-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #28a745; /* Green color for the update button */
+}
+
+.update-button:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+.post-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    background-color: #FFF;
+    border: 1px solid #DDD;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.post-summary a.update-button {
+    position: static;
+    margin-left: 20px;
 }

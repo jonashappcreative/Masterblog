@@ -23,6 +23,9 @@
                 <h3>{{ post["title"] }}</h3>
                 <p><em>Written by {{ post["author"] }}</em></p>
                 <p>{{ post["content"] }}</p>
+                <p>
+                    <a href="{{ url_for('update', post_id=post.id) }}" class="btn btn-primary update-button">Update</a>
+                </p>
             </div>
          {% endfor %}
 
