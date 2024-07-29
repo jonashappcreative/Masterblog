@@ -38,5 +38,19 @@
         "author": "Jan",
         "title": "Boomer Move",
         "content": "Jan hat aus Versehen in Snapchat eine Story angelegt"
+    },
+    {
+        "id": 7,
+        "uuid": "4dff27bc-96d9-4bc6-b2e5-135c78f967e1",
+        "author": "Jonas Happ",
+        "title": "hetbdljt",
+        "content": "Test Sentence "
+    },
+    {
+        "id": 8,
+        "uuid": "443365bc-7a8f-4757-80ef-539820b9d61e",
+        "author": "Jonas Happ",
+        "title": "Does it work?",
+        "content": "Test Sentence "
     }
 ]
